@@ -1,0 +1,12 @@
+#scoreList{
+    position: relative;
+bottom: -30px;
+}
+#past{
+    position: relative;
+    top: 25px;
+}
+.startOver{
+    position: relative;
+    bottom:-25px;
+}
