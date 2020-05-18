@@ -1,4 +1,4 @@
-let diceRoll = document.querySelector('#diceRoll')
+let diceRolls = document.querySelector('#diceRoll')
 let roll = document.querySelector('#rollIt')
 let pastRoll = document.querySelector('#past')
 let total = document.querySelector('#score') 
@@ -13,7 +13,7 @@ roll.addEventListener('click', function(){
     dieRolls = []
     let totalRolls = 0
     let dieIndex = 0
-    let userInput = diceRoll.value
+    let userInput = diceRolls.value
     while(dieIndex < userInput){
 
 
@@ -31,7 +31,7 @@ pastRoll.addEventListener('click' , function(){
     list.innerHTML = ''
     while(dieIndex < dieRolls.length){
         let scoreListItem = document.createElement("LI")
-        let score=document.createTextNode(`${dieIndex+1}. ${dieRolls[dieIndex]}`)
+        let score=document.createTextNode(`${dieRolls[dieIndex]}`)
         scoreListItem.appendChild(score)
         list.appendChild(scoreListItem)
         dieIndex += 1
@@ -45,4 +45,7 @@ pastRoll.addEventListener('click' , function(){
 Reset.addEventListener('click' , function(){
     list.innerHTML = ''
     total.innerHTML = ''
+    scoreList.innerHTML = ''
+    dieRolls = ''
+    
 })
